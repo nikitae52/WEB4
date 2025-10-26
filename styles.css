@@ -53,8 +53,7 @@ body {
 
 header {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  align-items: center; /* Центрує по вертикалі */
   padding: 20px;
   max-width: 1000px;
   width: 100%;
@@ -68,15 +67,23 @@ header {
 .logo {
   font-family: "AlongSanss2 Medium", sans-serif;
   font-size: 30px;
-
   color: #cccccc;
-  position: relative;
-  left: -80px;
+  flex-grow: 1; /* Змушує лого зайняти весь простір, штовхаючи іконки вправо */
+  
+  /* Скидаємо ваші "милиці" */
+  position: static; 
+  left: auto;
 }
-
-.social-icons img {
+.nav-menu {
+  margin-right: 15px; /* Відступ між меню та соц. іконками */
+}
+.social-icons {
+  display: flex; /* (Це вже у вас є, але переконайтесь) */
+}
+.social-icons img, .nav-menu img {
   width: 20px;
   height: 20px;
+  display: block;
 }
 
 main {
@@ -238,18 +245,26 @@ footer {
 }
 
 @media screen and (max-width: 768px) {
-  header {
-    flex-direction: column;
-    align-items: flex-start;
+header {
+    flex-direction: row;
+    align-items: center;
+    max-width: 100%; /* Дозволяє header зайняти всю ширину */
+    
+    /* МАГІЯ ТУТ: 
+       Розставляє 3 елементи (Лого, Меню, Соц. іконки) 
+       рівномірно по краях і по центру */
+    justify-content: space-between; 
   }
-
   .social-icons {
     margin-top: 10px;
   }
 
-  .logo {
-    font-size: 20px;
+.logo {
+    flex-grow: 0; /* Вимикаємо "розтягування" */
     left: 0;
+  }
+  .nav-menu {
+    margin-right: 0; /* Прибираємо десктопний відступ */
   }
 
   .laptop-image {
@@ -280,20 +295,28 @@ footer {
 }
 
 @media screen and (max-width: 480px) {
-  header {
+header {
     flex-direction: row;
-    align-items: flex-start;
-    max-width: 350px;
+    align-items: center;
+    max-width: 100%; /* Дозволяє header зайняти всю ширину */
+    
+    /* МАГІЯ ТУТ: 
+       Розставляє 3 елементи (Лого, Меню, Соц. іконки) 
+       рівномірно по краях і по центру */
+    justify-content: space-between; 
   }
 
   .main-section {
     flex-direction: column;
     align-items: center;
   }
-  .logo {
+.logo {
+    flex-grow: 0; /* Вимикаємо "розтягування" */
     left: 0;
   }
-
+  .nav-menu {
+    margin-right: 0; /* Прибираємо десктопний відступ */
+  }
   .laptop-image {
     width: 80%;
     max-width: 300px;
