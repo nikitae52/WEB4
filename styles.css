@@ -255,9 +255,7 @@ header {
        рівномірно по краях і по центру */
     justify-content: space-between; 
   }
-  .social-icons {
-    margin-top: 10px;
-  }
+
 
 .logo {
     flex-grow: 0; /* Вимикаємо "розтягування" */
