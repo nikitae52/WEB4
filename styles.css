@@ -53,11 +53,12 @@ body {
 
 header {
   display: flex;
-  align-items: center; /* Центрує по вертикалі */
+  align-items: center; 
   padding: 20px;
   max-width: 1000px;
   width: 100%;
   margin: 0 auto;
+  position: relative;
 }
 
 .social-icons a {
@@ -263,6 +264,10 @@ header {
   }
   .nav-menu {
     margin-right: 0; /* Прибираємо десктопний відступ */
+
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
   }
 
   .laptop-image {
@@ -314,6 +319,9 @@ header {
   }
   .nav-menu {
     margin-right: 0; /* Прибираємо десктопний відступ */
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
   }
   .laptop-image {
     width: 80%;
