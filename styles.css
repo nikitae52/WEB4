@@ -69,17 +69,15 @@ header {
   font-family: "AlongSanss2 Medium", sans-serif;
   font-size: 30px;
   color: #cccccc;
-  flex-grow: 1; /* Змушує лого зайняти весь простір, штовхаючи іконки вправо */
-  
-  /* Скидаємо ваші "милиці" */
+  flex-grow: 1; 
   position: static; 
   left: auto;
 }
 .nav-menu {
-  margin-right: 15px; /* Відступ між меню та соц. іконками */
+  margin-right: 15px; 
 }
 .social-icons {
-  display: flex; /* (Це вже у вас є, але переконайтесь) */
+  display: flex; 
 }
 .social-icons img, .nav-menu img {
   width: 20px;
@@ -249,21 +247,17 @@ footer {
 header {
     flex-direction: row;
     align-items: center;
-    max-width: 100%; /* Дозволяє header зайняти всю ширину */
-    
-    /* МАГІЯ ТУТ: 
-       Розставляє 3 елементи (Лого, Меню, Соц. іконки) 
-       рівномірно по краях і по центру */
+    max-width: 100%;
     justify-content: space-between; 
   }
 
 
 .logo {
-    flex-grow: 0; /* Вимикаємо "розтягування" */
+    flex-grow: 0;
     left: 0;
   }
   .nav-menu {
-    margin-right: 0; /* Прибираємо десктопний відступ */
+    margin-right: 0;
 
     position: absolute;
     left: 50%;
@@ -301,11 +295,7 @@ header {
 header {
     flex-direction: row;
     align-items: center;
-    max-width: 100%; /* Дозволяє header зайняти всю ширину */
-    
-    /* МАГІЯ ТУТ: 
-       Розставляє 3 елементи (Лого, Меню, Соц. іконки) 
-       рівномірно по краях і по центру */
+    max-width: 100%;
     justify-content: space-between; 
   }
 
@@ -314,11 +304,11 @@ header {
     align-items: center;
   }
 .logo {
-    flex-grow: 0; /* Вимикаємо "розтягування" */
+    flex-grow: 0; 
     left: 0;
   }
   .nav-menu {
-    margin-right: 0; /* Прибираємо десктопний відступ */
+    margin-right: 0;
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
